@@ -1,7 +1,9 @@
+package thread_implementation;
+
 public class Task implements Runnable {
     @Override
     public void run() {
-        System.out.println("Inside run");
+        System.out.println("Inside task1 run");
         go();
     }
     public void go(){

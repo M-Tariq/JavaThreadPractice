@@ -1,7 +1,10 @@
+package thread_implementation;
+
+//tightly coupled and not recommended
 public class Task2 extends Thread {
     @Override
     public void run() {
-        System.out.println("Inside run");
+        System.out.println("Inside task2 run");
         go();
 
     }

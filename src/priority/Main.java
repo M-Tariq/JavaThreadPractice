@@ -1,4 +1,4 @@
-package thread_priority;
+package priority;
 class Main{
     public static void main(String[] args){
 
@@ -8,13 +8,13 @@ class Main{
         emailCampaignThread.setName("EmailCampaign");
         dataAggregatorThread.setName("DataAggregator");
 
-        emailCampaignThread.setPriority(Thread.MIN_PRIORITY);
+        emailCampaignThread.setPriority(Thread.MIN_PRIORITY); //higher priority
         dataAggregatorThread.setPriority(Thread.MAX_PRIORITY);
 
         dataAggregatorThread.start();
         emailCampaignThread.start();
-        try {
-            emailCampaignThread.join();
+       try {
+           dataAggregatorThread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

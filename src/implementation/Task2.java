@@ -1,9 +1,10 @@
-package thread_implementation;
+package implementation;
 
-public class Task implements Runnable {
+//tightly coupled and not recommended
+public class Task2 extends Thread {
     @Override
     public void run() {
-        System.out.println("Inside task1 run");
+        System.out.println("Inside task2 run");
         go();
     }
     public void go(){
@@ -13,5 +14,4 @@ public class Task implements Runnable {
     public void more(){
         System.out.println("Inside more");
     }
-
 }

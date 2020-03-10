@@ -1,4 +1,4 @@
-package thread_priority;
+package priority;
 
 public class EmailCompaign implements Runnable {
     @Override
